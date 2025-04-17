@@ -49,13 +49,6 @@ body {
     gap: 15px;
 }
 
-.conversas-header h3 {
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    white-space: nowrap;
-}
-  
 .search-container {
     position: relative;
     flex: 1;
@@ -65,22 +58,22 @@ body {
     background-color: rgba(0, 0, 0, 0.15);
     border-radius: 18px;
     overflow: hidden;
-}
+} 
   
 .numero{
     flex: 1;
-      padding: 8px 15px 8px 36px;
-      border: none;
-      background-color: rgba(0, 0, 0, 0.15);
-      color: white;
-      outline: none;
-      font-size: 14px;
-      height: 36px;
+    padding: 8px 15px 8px 36px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: white;
+    outline: none;
+    font-size: 14px;
+    height: 36px;
 }
-  
+
 .numero:placeholder{
     background-color: rgba(255, 255, 255, 0.7);
-}
+} 
   
 .search-button {
     padding: 0 12px;
@@ -93,10 +86,6 @@ body {
     white-space: nowrap;
 }
   
-.search-button:hover {
-    background-color: #128C7E;
-}
-
 
 .search-button {
     padding: 0 8px;
@@ -110,18 +99,15 @@ body {
     white-space: nowrap;
 }
   
-.search-button:hover {
-    background-color: rgba(255, 255, 255, 0.7);
-}
-  
+
 .conversas-lista {
     flex: 1;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 }
-  
-.contact-item {
+
+.contato-item {
     display: flex;
     padding: 12px;
     gap: 12px;
@@ -130,34 +116,10 @@ body {
     transition: background-color 0.2s;
 }
   
-.contact-item:hover {
-    background-color: rgba(0, 0, 0, 0.03);
-}
-  
-.contact-avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-  
-.contact-info {
-    flex: 1;
-    min-width: 0;
-}
-
-.contact-name {
+.contato-nome {
     font-weight: 500;
-    color: var  #111B21;
+    color: #111B21;
     margin-bottom: 4px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-  
-.contact-last-msg {
-    font-size: 13px;
-    color: var #667781;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -168,7 +130,6 @@ body {
     display: flex;
     flex-direction: column;
     background-color:  #b2eaca;
-    background-image: url('https://web.whatsapp.com/img/bg-chat-tile-light_a4be512e7195b6b733d9110b408f075d.png');
 }
   
 .chat-header {
@@ -180,13 +141,6 @@ body {
     justify-content: space-between;
 }
   
-.chat-header h3 {
-    color:  #111B21;
-    font-size: 16px;
-    font-weight: 500;
-}
-  
-
 .mensagens {
     flex: 1;
     padding: 20px;
@@ -195,8 +149,29 @@ body {
     flex-direction: column;
     gap: 8px;
 }
+.mensagem-recebida {
+    align-self: flex-start;
+    background-color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 8px 8px 8px 0;
+    max-width: 60%;
+    font-size: 14px;
+    line-height: 1.4;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
   
-.message {
+  .mensagem-enviada {
+    align-self: flex-end;
+    background-color: #d9fdd3;
+    padding: 10px 14px;
+    border-radius: 8px 8px 0 8px;
+    max-width: 60%;
+    font-size: 14px;
+    line-height: 1.4;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+.asMensagens {
     max-width: 70%;
     padding: 8px 12px;
     border-radius: 8px;
@@ -205,29 +180,9 @@ body {
     position: relative;
     word-wrap: break-word;
     box-shadow:rgba(0, 0, 0, 0.08);
-}
-  
-.message-in {
-    background-color: #ffffff;
-    align-self: flex-start;
-    border-top-left-radius: 0;
-}
-  
-.message-out {
-    background-color:#f0f0f0;
-    align-self: flex-end;
-    border-top-right-radius: 0;
-}
-  
-.message-time {
-    font-size: 11px;
-    color:#DCF8C6;
-    float: right;
-    margin-left: 8px;
-    margin-top: 4px;
-}
-  
-.messagem-input {
+}  
+    
+.asMensagens-input {
     padding: 12px 16px;
     background-color: #cad7d4;
     display: flex;
@@ -235,7 +190,7 @@ body {
     gap: 12px;
 }
   
-.messagem-input input {
+.asMensagens-input input {
     flex: 1;
     padding: 12px 16px;
     border: none;
@@ -247,11 +202,8 @@ body {
     transition: box-shadow 0.2s;
 }
   
-.messagem-input input:focus {
-    box-shadow: 0 0 0 2px  #b2eaca;
-}
-  
-.messagem-input button {
+
+ .asMensagens-input button {
     padding: 12px 24px;
     background-color:#036159;
     color: white;
@@ -261,8 +213,8 @@ body {
     font-weight: 500;
     transition: background-color 0.2s;
 }
-  
-.messagem-input button:hover {
-    background-color: var(--whatsapp-dark-green);
-}
+
+.asMensagens-input button:hover {
+    background-color: #036159;
+} 
   
